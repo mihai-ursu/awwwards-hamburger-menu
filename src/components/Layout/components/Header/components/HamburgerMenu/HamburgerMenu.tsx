@@ -42,11 +42,12 @@ const HamburgerMenu: FC = () => {
           className={styles.navigation}
         >
           {links.map((link) => {
+            const linkNameArray = link.text.split("");
             return (
               <Link href={link.href} key={link.id}>
                 <a className={styles.menuLink}>
                   <span className={styles.letters}>
-                    {link.text.split("").map((letter, index) => {
+                    {linkNameArray.map((letter, index) => {
                       const evenLetterClass =
                         (index + 1) % 2 === 0
                           ? styles.evenLetter
@@ -77,7 +78,7 @@ const HamburgerMenu: FC = () => {
         initial="initial"
         animate="animate"
         exit="exit"
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
         onAnimationStart={() => setisHamburgerAnimating(true)}
         onAnimationComplete={() => setisHamburgerAnimating(false)}
       />
