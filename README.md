@@ -1,6 +1,8 @@
 ## Hamburger Menu Animation
 
-First, run the development server:
+Next.js + Framer Motion + Zustand Hamburger Menu
+
+To run the project:
 
 ```bash
 npm run dev
